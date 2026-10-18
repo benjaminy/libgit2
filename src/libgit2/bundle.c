@@ -615,7 +615,7 @@ static int bundle_refs_snapshot(
 	git_reference *direct, *resolved;
 	bundle_ref *ref;
 	size_t i;
-	int valid, error;
+	int valid, error = 0;
 
 	if (!refs || !refs->count) {
 		git_error_set(GIT_ERROR_INVALID, "no references selected for bundle");
